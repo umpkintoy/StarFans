@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">StarFans</string>
+
+    <string name="event_display">Event Info</string>
+    <string name="event_arrow">Event More</string>
+    <string name="fantaken_display">Fan Taken</string>
+    <string name="fantaken_arrow">Fanteken More</string>
+</resources>
