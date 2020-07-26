@@ -18,8 +18,9 @@ public class FantakenAdapter extends RecyclerView.Adapter<FantakenAdapter.ViewFa
 
     private List<String> fantakenurl;
     private OnFantakenClickListener onFantakenClickListener;
-    public void setOnFantakenClickListener(OnFantakenClickListener onFantakenClickListener) {
-        this.onFantakenClickListener = onFantakenClickListener;
+
+    public void setFansTakenListener(OnFantakenClickListener onFansClickListener) {
+        this.onFantakenClickListener = onFansClickListener;
     }
 
     public FantakenAdapter(List<String> url) {
@@ -29,14 +30,14 @@ public class FantakenAdapter extends RecyclerView.Adapter<FantakenAdapter.ViewFa
 
     @NonNull
     @Override
-    public FantakenAdapter.ViewFantakenHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewFantakenHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View view = layoutInflater.inflate(R.layout.activity_fantaken_list, parent, false);
-        return new FantakenAdapter.ViewFantakenHolder(view);
+        View view = layoutInflater.inflate(R.layout.fantaken_item, parent, false);
+        return new ViewFantakenHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull FantakenAdapter.ViewFantakenHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewFantakenHolder holder, int position) {
         Picasso.get()
                 .load(fantakenurl.get(position))
                 .placeholder(R.drawable.fantaken1)
@@ -54,11 +55,12 @@ public class FantakenAdapter extends RecyclerView.Adapter<FantakenAdapter.ViewFa
 
         public ViewFantakenHolder(@NonNull View itemView) {
             super(itemView);
+            fantakenpic = itemView.findViewById(R.id.fantaken_item);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    OnFantakenClickListener.onFantakenClick("");
+                    onFantakenClickListener.onFantakenClick("");
                 }
             });
         }

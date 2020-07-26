@@ -11,7 +11,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import id.umpkindev.starfans.adapter.EventAdapter;
+import id.umpkindev.starfans.adapter.FantakenAdapter;
 import id.umpkindev.starfans.adapter.OnEventClickListener;
+import id.umpkindev.starfans.adapter.OnFantakenClickListener;
 
 public class FantakenListActivity extends AppCompatActivity {
 
@@ -31,10 +33,10 @@ public class FantakenListActivity extends AppCompatActivity {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        EventAdapter adapter = new EventAdapter(fantakenturl);
-        adapter.setOnEventClickListener(new OnEventClickListener() {
+        FantakenAdapter adapter = new FantakenAdapter(fantakenturl);
+        adapter.setFansTakenListener(new OnFantakenClickListener() {
             @Override
-            public void onEventClick(String id) {
+            public void onFantakenClick(String id) {
                 Intent welcome = new Intent(FantakenListActivity.this,EventDetailActivity.class);
                 startActivity(welcome);
             }

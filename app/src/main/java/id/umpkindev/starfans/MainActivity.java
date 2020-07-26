@@ -19,10 +19,21 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Home");
 
         ImageButton btnMoreEvent = findViewById(R.id.event_more_btn);
+        ImageButton btnMoreFantaken = findViewById(R.id.fantaken_more_btn);
+
         btnMoreEvent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent welcome = new Intent(MainActivity.this,EventListActivity.class);
+                startActivity(welcome);
+            }
+        });
+
+
+        btnMoreFantaken.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent welcome = new Intent(MainActivity.this,FantakenListActivity.class);
                 startActivity(welcome);
             }
         });

@@ -96,6 +96,7 @@
                     android:textColor="@android:color/black" />
 
                 <ImageButton
+                    android:id="@+id/fantaken_more_btn"
                     android:layout_width="35dp"
                     android:layout_height="25dp"
                     android:layout_alignParentStart="true"
