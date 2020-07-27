@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "982884599259",
+    "firebase_url": "https://starfans-3ca51.firebaseio.com",
+    "project_id": "starfans-3ca51",
+    "storage_bucket": "starfans-3ca51.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:982884599259:android:b584913fec78b7559213fe",
+        "android_client_info": {
+          "package_name": "id.umpkindev.starfans"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "982884599259-ob2gnt4tcsd70p9m53q7c8ia5tc009eb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeQtD8sW61UN737AxyGG7BM4DDdUvwp5E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "982884599259-ob2gnt4tcsd70p9m53q7c8ia5tc009eb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
