@@ -5,13 +5,14 @@
     android:layout_height="wrap_content"
     android:padding="15dp">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fantaken_item" />
+    
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="judul"/>
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/fantaken_item" />
 </LinearLayout>

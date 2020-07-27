@@ -64,7 +64,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.MyViewHolder
                     onEventClickListener.onEventClick("");
                 }
             });
-            eventposter = itemView.findViewById(R.id.event_item);
+            eventposter = itemView.findViewById(R.id.fantaken_item);
         }
     }
 }

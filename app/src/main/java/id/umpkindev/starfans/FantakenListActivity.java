@@ -37,7 +37,7 @@ public class FantakenListActivity extends AppCompatActivity {
         adapter.setFansTakenListener(new OnFantakenClickListener() {
             @Override
             public void onFantakenClick(String id) {
-                Intent welcome = new Intent(FantakenListActivity.this,EventDetailActivity.class);
+                Intent welcome = new Intent(FantakenListActivity.this,FantakenDetailActivity.class);
                 startActivity(welcome);
             }
         });
