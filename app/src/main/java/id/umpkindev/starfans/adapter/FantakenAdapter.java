@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -43,6 +44,7 @@ public class FantakenAdapter extends RecyclerView.Adapter<FantakenAdapter.ViewFa
                 .load(fantakenModel.poster())
                 .placeholder(R.drawable.fantaken1)
                 .into(holder.fantakenpic);
+        holder.fantakenmain.setText(fantakenModel.getTitle());
         holder.itemview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -59,6 +61,7 @@ public class FantakenAdapter extends RecyclerView.Adapter<FantakenAdapter.ViewFa
     public class ViewFantakenHolder extends RecyclerView.ViewHolder {
 
         private ImageView fantakenpic;
+        private TextView fantakenmain;
         private View itemview;
 
         public ViewFantakenHolder(@NonNull View itemView) {
@@ -66,6 +69,7 @@ public class FantakenAdapter extends RecyclerView.Adapter<FantakenAdapter.ViewFa
             itemview = itemView;
 
             fantakenpic = itemView.findViewById(R.id.fantaken_item);
+            fantakenmain = itemView.findViewById(R.id.fantaken_title_main);
         }
     }
 }

@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -32,9 +33,13 @@ public class FantakenListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fantaken_list);
 
+        getSupportActionBar().setTitle("Fantaken List");
+
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
         final List<FantakenModel> fantakenModels = new ArrayList<>();
+        final TextView fantakenTitle = findViewById(R.id.fantaken_title);
+
 
         //List<String>fantakenturl = new ArrayList<>();
         //fantakenturl.add("https://firebasestorage.googleapis.com/v0/b/starfans-3ca51.appspot.com/o/BabyBeanie0323_191115.jpg?alt=media&token=2950840b-cbae-42f9-80df-601d024c5284");
@@ -75,5 +80,6 @@ public class FantakenListActivity extends AppCompatActivity {
                         }
                     }
                 });
+
     }
 }

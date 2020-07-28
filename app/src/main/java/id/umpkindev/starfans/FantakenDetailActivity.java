@@ -33,6 +33,8 @@ public class FantakenDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fantaken_detail);
 
+        getSupportActionBar().setTitle("Fantaken Detail");
+
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
         Intent intent = getIntent();

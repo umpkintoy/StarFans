@@ -31,6 +31,8 @@ public class EventDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_detail);
 
+        getSupportActionBar().setTitle("Event Detail");
+
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
         Intent intent = getIntent();

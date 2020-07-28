@@ -30,6 +30,8 @@ public class EventListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_list);
 
+        getSupportActionBar().setTitle("Event List");
+
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
         final List<EventModel> eventModels = new ArrayList<>();
