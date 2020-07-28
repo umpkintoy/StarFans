@@ -22,8 +22,8 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.MyViewHolder
 
     //private List<String> eventurl;
     private List<EventModel> eventModels;
-
     private OnEventClickListener onEventClickListener;
+
     public void setOnEventClickListener(OnEventClickListener onEventClickListener) {
         this.onEventClickListener = onEventClickListener;
     }

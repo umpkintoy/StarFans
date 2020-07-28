@@ -13,20 +13,20 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 import id.umpkindev.starfans.R;
+import id.umpkindev.starfans.models.FantakenModel;
 
 public class FantakenAdapter extends RecyclerView.Adapter<FantakenAdapter.ViewFantakenHolder> {
 
-    private List<String> fantakenurl;
+    private List<FantakenModel> fantakenModels;
     private OnFantakenClickListener onFantakenClickListener;
 
-    public void setFansTakenListener(OnFantakenClickListener onFansClickListener) {
-        this.onFantakenClickListener = onFansClickListener;
+    public void setFansTakenListener(OnFantakenClickListener onFantakenClickListener) {
+        this.onFantakenClickListener = onFantakenClickListener;
     }
 
-    public FantakenAdapter(List<String> url) {
-        fantakenurl = url;
+    public FantakenAdapter(List<FantakenModel> fantakens ) {
+        fantakenModels = fantakens;
     }
-
 
     @NonNull
     @Override
@@ -38,31 +38,34 @@ public class FantakenAdapter extends RecyclerView.Adapter<FantakenAdapter.ViewFa
 
     @Override
     public void onBindViewHolder(@NonNull ViewFantakenHolder holder, int position) {
+        final FantakenModel fantakenModel = fantakenModels.get(position);
         Picasso.get()
-                .load(fantakenurl.get(position))
+                .load(fantakenModel.poster())
                 .placeholder(R.drawable.fantaken1)
                 .into(holder.fantakenpic);
+        holder.itemview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onFantakenClickListener.onFantakenClick(fantakenModel.getId()); //mengirimkan id dari firestore ketika di click
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
-        return fantakenurl.size();
+        return fantakenModels.size();
     }
 
     public class ViewFantakenHolder extends RecyclerView.ViewHolder {
 
         private ImageView fantakenpic;
+        private View itemview;
 
         public ViewFantakenHolder(@NonNull View itemView) {
             super(itemView);
-            fantakenpic = itemView.findViewById(R.id.fantaken_item);
+            itemview = itemView;
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    onFantakenClickListener.onFantakenClick("");
-                }
-            });
+            fantakenpic = itemView.findViewById(R.id.fantaken_item);
         }
     }
 }
