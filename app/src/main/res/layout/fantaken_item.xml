@@ -7,13 +7,12 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="275dp"
         android:id="@+id/fantaken_item" />
     
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
         style="@style/title_fantaken"
         android:id="@+id/fantaken_title_main" />
 

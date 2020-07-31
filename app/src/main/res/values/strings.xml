@@ -5,4 +5,7 @@
     <string name="event_arrow">Event More</string>
     <string name="fantaken_display">Fan Taken</string>
     <string name="fantaken_arrow">Fanteken More</string>
+    <string name="disclaimer">All sources and photos are the property of the owner and these are all
+        taken directly through the photo link uploaded from the source
+        (the source is written in the description)</string>
 </resources>

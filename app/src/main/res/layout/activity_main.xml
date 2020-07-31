@@ -35,7 +35,7 @@
                 <ImageButton
                     android:id="@+id/event_more_btn"
                     android:layout_width="35dp"
-                    android:layout_height="25dp"
+                    android:layout_height="match_parent"
                     android:layout_alignParentStart="true"
                     android:layout_marginStart="370dp"
                     android:layout_marginEnd="8dp"
@@ -58,7 +58,7 @@
                         android:id="@+id/firstrecycle_cardview"
 
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent">
+                        android:layout_height="wrap_content">
 
                         <ImageView
                             android:layout_width="200dp"
@@ -70,7 +70,7 @@
                         android:id="@+id/secondrecycle_cardview"
 
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent">
+                        android:layout_height="wrap_content">
 
                         <ImageView
                             android:layout_width="200dp"
@@ -98,7 +98,7 @@
                 <ImageButton
                     android:id="@+id/fantaken_more_btn"
                     android:layout_width="35dp"
-                    android:layout_height="25dp"
+                    android:layout_height="match_parent"
                     android:layout_alignParentStart="true"
                     android:layout_marginStart="370dp"
                     android:layout_marginEnd="8dp"
