@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,8 +19,8 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle("Home");
 
-        ImageButton btnMoreEvent = findViewById(R.id.event_more_btn);
-        ImageButton btnMoreFantaken = findViewById(R.id.fantaken_more_btn);
+        ImageView btnMoreEvent = findViewById(R.id.event_more_btn);
+        ImageView btnMoreFantaken = findViewById(R.id.fantaken_more_btn);
 
         btnMoreEvent.setOnClickListener(new View.OnClickListener() {
             @Override
