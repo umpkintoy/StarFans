@@ -13,6 +13,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        
         style="@style/title_fantaken"
         android:id="@+id/fantaken_title_main" />
 
